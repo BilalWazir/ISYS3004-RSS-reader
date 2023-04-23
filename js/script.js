@@ -69,14 +69,13 @@ function onAddRSSClicked(event) {
   newRSSInput.value = "";
 
   // CORS proxy
-  const corsProxy = 'https://cors-anywhere.herokuapp.com/';
+  const corsProxy = 'https://cors-everywhere.herokuapp.com/';
   const rss2jsonAPI = 'https://api.rss2json.com/v1/api.json?rss_url=';
 
   // Create and send a GET request
   // The first argument is the post type (GET, POST, PUT, DELETE, etc.)
   // The second argument is the endpoint URL
   xhr.open('GET', corsProxy + rss2jsonAPI + encodeURIComponent(URL));
-  xhr.setRequestHeader('X-Requested-With', 'XMLHttpRequest'); // Required by the CORS proxy
   xhr.send();
 }
 
